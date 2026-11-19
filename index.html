@@ -67,7 +67,7 @@
   nav.main::-webkit-scrollbar { display: none; }
   nav.main a {
     color: var(--muted); font-size: 14px; font-weight: 600;
-    padding: 12px 10px; border-radius: var(--radius);
+    padding: 13px 10px; border-radius: var(--radius); line-height: 1.2;
     white-space: nowrap; flex: 0 0 auto; text-decoration: none;
   }
   nav.main a:hover { color: var(--ink); background: var(--surface); }
@@ -144,6 +144,11 @@
     .ledger .row { grid-template-columns: 1fr; gap: 0; padding: 11px 0; }
     button { padding: 11px 12px; }
   }
+  @media (max-width: 420px) {
+    .bar { padding: 10px 14px; gap: 8px; }
+    .stamp { width: 34px; height: 34px; font-size: 14px; }
+    button { padding: 10px 10px; font-size: 13px; }
+  }
 
   @media print {
     * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
@@ -185,10 +190,10 @@
   <div class="hero">
     <h1>Yogi Apriyanto</h1>
     <div class="rule" aria-hidden="true"></div>
-    <p class="role">Mekanik <span>PT Uwu Jump Indonesia, Mei - November 2026</span></p>
+    <p class="role">Mekanik <span>PT Uwu Jump Indonesia, <span style="white-space: nowrap;">Mei - November 2026</span></span></p>
     <p class="lead">Tenaga kerja yang disiplin, teliti, dan bertanggung jawab. Siap berkontribusi langsung di lingkungan kerja, menjaga standar operasional, dan menyelesaikan tugas tepat waktu.</p>
     <div class="ledger" aria-label="Kontak singkat">
-      <div class="row"><div class="k">Domisili</div><div class="v">Dsn. Simpang, Desa Kotasari, Kec.Pusakanagara, Kab.Subang</div></div>
+      <div class="row"><div class="k">Domisili</div><div class="v">Dsn. Simpang, Desa Kotasari, Kec. Pusakanagara, Kab.Subang</div></div>
       <div class="row"><div class="k">WhatsApp</div><div class="v">[Nomor WhatsApp]</div></div>
       <div class="row"><div class="k">Email</div><div class="v">yogiapriyanto1010@gmail.com</div></div>
     </div>
@@ -270,7 +275,7 @@
     <p class="sub">Silakan hubungi saya untuk keperluan kerja sama atau lamaran kerja.</p>
     <div class="ledger">
       <div class="row"><div class="k">Nama Lengkap</div><div class="v">Yogi Apriyanto</div></div>
-      <div class="row"><div class="k">Domisili</div><div class="v">Dsn. Simpang, Desa Kotasari, Kec.Pusakanagara, Kab.Subang</div></div>
+      <div class="row"><div class="k">Domisili</div><div class="v">Dsn. Simpang, Desa Kotasari, Kec. Pusakanagara, Kab.Subang</div></div>
       <div class="row"><div class="k">WhatsApp</div><div class="v">[Nomor WhatsApp]</div></div>
       <div class="row"><div class="k">Email</div><div class="v">yogiapriyanto1010@gmail.com</div></div>
     </div>
