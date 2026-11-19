@@ -57,10 +57,11 @@
   }
   .brand { font-weight: 700; font-size: 17px; color: var(--text); letter-spacing: .2px; }
   .brand span { color: var(--accent); }
-  nav.main { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
+  nav.main { display: flex; gap: 4px; flex-wrap: nowrap; margin-left: auto; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+  nav.main::-webkit-scrollbar { display: none; }
   nav.main a {
     color: var(--muted); font-size: 14px; font-weight: 600;
-    padding: 6px 10px; border-radius: 8px;
+    padding: 6px 10px; border-radius: 8px; white-space: nowrap; flex: 0 0 auto;
   }
   nav.main a:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
   .actions { display: flex; gap: 8px; }
@@ -85,7 +86,7 @@
     border: 1px solid rgba(255, 255, 255, .35); border-radius: 999px; padding: 5px 12px;
   }
   .hero p.lead { color: #cdd9e5; max-width: 640px; margin-top: 12px; font-size: 17px; }
-  .hero .meta { display: flex; gap: 8px 20px; flex-wrap: wrap; margin-top: 20px; color: #dbe6f0; font-size: 14px; }
+  .hero .meta { display: flex; gap: 10px 20px; flex-wrap: wrap; margin-top: 24px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .25); color: #dbe6f0; font-size: 14px; }
   .hero .meta b { color: #fff; font-weight: 600; }
   .hero .cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
   .hero .cta button { border-color: rgba(255, 255, 255, .4); background: transparent; color: #fff; }
@@ -153,7 +154,8 @@
 
   @media (max-width: 640px) {
     .card { padding: 20px; }
-    nav.main { order: 3; width: 100%; }
+    nav.main { order: 3; width: 100%; margin-left: 0; gap: 2px; }
+    nav.main a { padding: 6px 8px; font-size: 13px; }
     dl.contact { grid-template-columns: 1fr; gap: 2px; }
     dl.contact dd { margin-bottom: 8px; }
   }
@@ -195,13 +197,12 @@
     <h1>[Nama Lengkap]</h1>
     <p class="lead">Tenaga kerja yang disiplin, teliti, dan bertanggung jawab. Siap berkontribusi langsung di lingkungan kerja, menjaga standar operasional, dan menyelesaikan tugas tepat waktu.</p>
     <div class="meta">
-      <div>Domisili: <b>[Dsn. Simpang, Desa Kotasari, Kec.Pusakanagara, Kab.Subang]</b></div>
+      <div>Domisili: <b>Dsn. Simpang, Desa Kotasari, Kec.Pusakanagara, Kab.Subang</b></div>
       <div>WhatsApp: <b>[Nomor WhatsApp]</b></div>
-      <div>Email: <b>[yogiapriyanto1010@gmail.com]</b></div>
+      <div>Email: <b>yogiapriyanto1010@gmail.com</b></div>
     </div>
     <div class="cta">
       <button type="button" class="primary" onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'})">Hubungi Saya</button>
-      <button type="button" onclick="window.print()">Cetak / Simpan PDF</button>
     </div>
   </div>
 </div>
@@ -304,11 +305,11 @@
         <dt>Nama Lengkap</dt>
         <dd>[Nama Lengkap]</dd>
         <dt>Domisili</dt>
-        <dd>[Kota/Domisili]</dd>
+        <dd>Dsn. Simpang, Desa Kotasari, Kec.Pusakanagara, Kab.Subang</dd>
         <dt>WhatsApp</dt>
         <dd>[Nomor WhatsApp]</dd>
         <dt>Email</dt>
-        <dd>[Email Aktif]</dd>
+        <dd>yogiapriyanto1010@gmail.com</dd>
       </dl>
       <p class="note">Catatan: ganti semua teks di dalam kurung siku dengan data Anda sebelum membagikan halaman ini. Jangan cantumkan data pribadi orang lain.</p>
     </div>
